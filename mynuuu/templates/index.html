@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Bubbly's Love 💝</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+<audio id="bgMusic" loop>
+    <source src="{{ url_for('static', filename='music/birthday.mp3') }}" type="audio/mpeg">
+</audio>
+<div id="hearts"></div>
+<div id="confetti"></div>
+<div id="balloons"></div>
+<div id="sparkles"></div>
+<!--page1: WElocme-->
+<section id="welcome">
+  <div class="overlay">
+    <h1 id="title">MY Lavvuuu 💝</h1>
+    <p id="subtitle">Let's Celebrate This Birthday Together My Dear...</p>
+    <button id="startBtn">💞 Let's Start 💞</button>
+  </div>
+</section>
+<!-- Page2 : CountDown-->
+<section id="countdownSection" class="hidden">
+   <div class="countContainer">
+    <span id="countNumber">3</span>
+    <p> It's Loading Bangarammm...</p>
+   </div>
+</section>
+<!-- Page3: Bithday Blast-->
+<section id="birthdayBlast" class="hidden">
+  <div class="blastContainer">
+    <h1 id="birthdayTitle">Happyyy Birthday 🎉</h1>
+    <h2 id="birthdayName">My Dear Handsome Husband 💖</h2>
+    <img id="bubu" src="{{ url_for('static', filename='gifs/bubu-cake.gif.jpg') }}" alt="Bubu Cake">
+    <br>
+    <button id="cakeBtn">🎂 Let's Cut the Cake</button>
+  </div>
+</section>
+<!-- Page4: Cake-->
+<section id="cakeSection" class="hidden">
+  <div class="cakeContainer">
+    <h1>Celebrate the Moment My Dear Trader</h1>
+    <div class="cake">
+      <div class="candles-row">
+        <div class="candle"></div>
+        <div class="candle"></div>
+        <div class="candle"></div>
+      </div>
+      <div class="cake-top"></div>
+      <div class="cake-bottom">
+        <div id="cakeName">
+          Happy Bithday<br>
+          <span id="customName">BATMAN 💝</span>
+        </div>
+      </div>
+    </div>
+    <button id="cutCakeBtn">🔪 Cut The Cake Baby</button>
+    </div>
+</section> 
+<!-- Page 5: 25 Years-->
+<section id="loveMessage" class="hidden">
+  <div class="loveContainer">
+    <h1> Now You're 25 🥳</h1>
+    <h2> Let's Travel Another 75 Years<br>Together My Man😘</h2>
+    <p>I Love Uhh Baava💝💝</p>
+    <div class="kisses">💞😉😚😘💞</div>
+    <button id="chatBtn">Let's Have A Cute Conversation 💕</button>
+  </div>
+</section>
+<!--Page 6: Password--> 
+<section id="passwordSection" class="hidden">
+  <div class="passwordContainer">
+    <h1>🔐 Only My Husband Can Unlock This❤️ </h1>
+    <p>Enter our special password...</p>
+    <input type="password" id="passwordInput" placeholder="who am i for uhh?">
+    <p id="wrongPassword"></p>
+    <button id="unlockBtn">Unlock ❤️</button>
+  </div>
+</section>
+<!-- Page 7: Memories-->
+<section id="memories" class="hidden">
+  <div class="memoryContainer">
+    <h1>Our Beautiful Memories ❤️</h1>
+    <img id="memoryImage" src="" alt="Memory">
+    <p id="memoryText">Every memory with you is my Favourite Memory ❤️</p>
+    <button id="nextMemoryBtn">Next Memory ➜</button>
+  </div>
+ </section>
+<!-- Page 8:Forever Question-->
+<section id="questionSection" class="hidden">
+  <div class="questionContainer">
+    <img id="questionGif" src="{{ url_for('static', filename='images/love-bg.jpg')}}" alt="Mine Forever">
+    <h1>Will You Stay With Me Forever? ❤️</h1>
+    <div style="display: flex; justify-content: center; width: 100%;">
+      <div class="questionButtons">
+        <button id="yesBtn">Yes ❤️</button>
+        <button id="noBtn">No 😅</button>
+      </div>
+    </div>
+    <p> Think carefully... One answer can change everything 🥹❤️</p>
+  </div>
+</section> 
+<!-- Page 9: Heart Exploison-->
+<section id="heartExplosion" class="hidden">
+  <div class="heartContainer">
+    <h1>❤️💖💕💝💗💓</h1>
+    <h2> You Have Taken The Best Decision<br>Ever In Your Life ❤️</h2>
+    <p>Keep It UP My Dear Cricketer 😘</p>
+    <button id="continueBtn">Continue ➜</button>
+  </div>
+</section>
+<!-- Page 10: Bubu Love -->
+<section id="bubuLove" class="hidden">
+  <div class="bubuContainer">
+    <video autoplay loop muted playsinline style="width:280px; border-radius: 20px;">
+      <source src="{{ url_for('static', filename='gifs/bubu-hearts.gif.mp4')}}" type="video/mp4">
+    </video>
+    <h2>Unlimited Long Distance Hearts..<br> for uhhhh Rowdyyy 💕</h2>
+    <button id="loveNextBtn">Next ➜</button>
+  </div>
+</section>
+<!-- Page 11: Warning-->
+<section id="warningSection" class="hidden">
+  <div class="warningContainer">
+    <video id="warningGif" autoplay loop muted playsinline>
+      <source src="{{ url_for('static', filename='gifs/bubu-warning.gif.mp4')}}" type="video/mp4">
+    </video>
+    <h1 > ⚠️ Sweet Warning ⚠️</h1>
+    <p>I'm ur Wife, ur Lover and ur Everything.. so don't joke abt having separate marriages or second wife 😤 <br> U r always Mine Onlyy... Forever Mine Only 🫂</p>
+    <button id="readyBtn"> 😁 Yes, I'm Yours</button>
+  </div>
+</section>
+<!--- Page 12: Kiss--> 
+<section id="kissSection" class="hidden">
+  <div class="kissContainer">
+    <video id="kissGif" autoplay loop muted playsinline>
+      <source src="{{ url_for('static', filename='gifs/bubu-kiss.gif.mp4')}}" type="video/mp4">
+    </video>
+    <h1 > Misson Completed Successfully 💕</h1>
+    <p> Ummmmaaahhhhhhhh... 😘😘</p>
+    <button id="openLetterBtn">💌 Open My Letter </button>
+  </div>
+</section> 
+<!-- Page 13: Letter-->
+<section id="letterSection" class="hidden">
+  <div class="letterContainer">
+    <div id="envelope">
+      <div class="flap" ></div>
+      <div class="letter">
+        <h2> MY Dearest Love ❤️</h2>
+        <p id="letterText"> </p>
+      </div>
+    </div>
+    <button id="giftBtn">🎁 open Final Surprise</button>
+  </div>
+</section> 
+<!-- Page 14: Final Gift-->
+ <section id="giftSection" class="hidden">
+  <div class="giftContainer">
+    <div id="giftBox">
+      <div class="lid"></div>
+      <div class="box"></div>
+    </div>
+    <h1> Happy Birthdayyyyyyyyyy Nannnaaaaaa ❤️</h1>
+    <p> THank You For Being The Most Beautiful Part Of My Life 🥹💝<br>
+    Let's Be Together Forever... <br>
+    I Love You Infinity Times Baavaa ♾️💖</p>
+    <button id="replayBtn" >🔄 Replay Surprise</button>
+  </div>
+ </section>
+<script src="{{ url_for('static', filename='js/script.js') }}"> </script>
+</body>
+</html>
