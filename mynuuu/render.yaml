@@ -4,4 +4,4 @@ services:
     env: python
     rootDir: mynuuu
     buildCommand: pip install -r requirements.txt
-    startCommand: python3 -m gunicorn app:app --bind 0.0.0.0:$PORT
+    startCommand:find / -name "gunicorn" -type f 2>/dev/null; sleep 5
