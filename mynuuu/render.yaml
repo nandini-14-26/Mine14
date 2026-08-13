@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: birthday-surprise
-    env: python
-    rootDir: mynuuu
-    buildCommand: pip install -r requirements.txt
-    startCommand:find / -name "gunicorn" -type f 2>/dev/null; sleep 5
