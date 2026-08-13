@@ -6,9 +6,10 @@ body{overflow: hidden;background: #000;}
 .hidden{display: none!important;}
 
 section{
-  width: 100vw;height: 100vh;
+  width: 100vw;height: 100vh;height: 100dvh;
   display: flex;justify-content: center;align-items: center;
   position: absolute;top: 0;left: 0;overflow: hidden;
+  padding: 16px;
 }
 
 button{
@@ -656,3 +657,60 @@ margin-bottom: 5px;
   }
 }
 
+/* ══════════════════════════════════
+   RESPONSIVE — SMALL PHONES
+══════════════════════════════════ */
+@media(max-width:420px){
+  #title{font-size:38px;}
+  #subtitle{font-size:16px;line-height:26px;margin:18px 0;}
+  button{font-size:14px;padding:10px 20px;}
+  #countNumber{font-size:130px;}
+  .countContainer p{font-size:22px;}
+  #birthdayTitle{font-size:34px;}
+  #birthdayName{font-size:18px;}
+  #bubu,#questionGif,#warningGif,#kissGif{width:160px;}
+  .cakeContainer h1{font-size:24px;}
+  .cake{width:220px;}
+  .cake-top{width:150px;height:48px;}
+  .cake-bottom{width:200px;height:55px;}
+  .candles-row{width:120px;}
+  .candle{height:44px;}
+  #cakeName{font-size:16px;}
+  #customName{font-size:19px;}
+  .loveContainer h1{font-size:38px;}
+  .loveContainer h2{font-size:19px;line-height:30px;}
+  .loveContainer p{font-size:20px;}
+  .kisses{font-size:32px;}
+  .heartContainer h1{font-size:56px;}
+  .heartContainer h2{font-size:24px;line-height:36px;}
+  .heartContainer p{font-size:20px;}
+  .bubuContainer h2{font-size:24px;line-height:36px;}
+  .warningContainer h1,.kissContainer h1{font-size:28px;}
+  .warningContainer p,.kissContainer p{font-size:16px;line-height:30px;}
+  .questionContainer h1{font-size:36px;}
+  .questionContainer>p{font-size:15px;}
+  .memoryContainer h1{font-size:32px;}
+  #memoryImage{width:220px;height:270px;}
+  #memoryText{font-size:16px;line-height:26px;max-width:90%;}
+  .passwordContainer{padding:26px 18px;width:88%;}
+  .passwordContainer h1{font-size:24px;}
+  .passwordContainer>p{font-size:14px;}
+  #passwordInput{width:100%;font-size:15px;padding:12px 16px;}
+  #envelope{width:88vw;max-width:300px;}
+  #envelope .flap{
+    border-left-width:calc(44vw - 8px);
+    border-right-width:calc(44vw - 8px);
+    border-top-width:100px;
+  }
+  #envelope .letter{width:88vw;max-width:300px;padding:20px 18px 26px;max-height:38vh;}
+  #envelope .letter h2{font-size:24px;}
+  #letterText{font-size:15px;line-height:25px;}
+  #giftBox{width:150px;height:150px;}
+  #giftBox .box,#giftBox .lid{width:150px;}
+  .giftContainer h1{font-size:34px;}
+  .giftContainer p{font-size:16px;line-height:26px;width:92%;}
+  #yesBtn,#noBtn{width:130px;font-size:13px;padding:10px 16px;}
+}
+
+/* Extra-safety: prevent fixed-width elements from overflowing narrow viewports */
+#envelope,.passwordContainer,#memoryImage,.giftContainer p{max-width:94vw;}
