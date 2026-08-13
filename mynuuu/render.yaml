@@ -3,5 +3,5 @@ services:
     name: birthday-surprise
     env: python
     buildCommand: pip install -r mynuuu/requirements.txt
-    startCommand: cd mynuuu && gunicorn app:app
+    startCommand: cd mynuuu && python -m gunicorn app:app --bind 0.0.0.0:$PORT
     pythonVersion: "3.11.9"
